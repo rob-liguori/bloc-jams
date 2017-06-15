@@ -1,4 +1,5 @@
-var albumPicasso = {
+ // Example Album
+ var albumPicasso = {
      title: 'The Colors',
      artist: 'Pablo Picasso',
      label: 'Cubism',
@@ -29,6 +30,22 @@ var albumPicasso = {
      ]
  };
 
+ // Yet Another Example Album
+ var albumElvis = {
+     title: 'Elvis Greatest Hits',
+     artist: 'Elvis Presley',
+     label: 'RCA',
+     year: '1956-67',
+     albumArtUrl: 'assets/images/album_covers/22.jpg',
+     songs: [
+         { title: 'Mystery Train', duration: '2:39' },
+         { title: 'Heartbreak Hotel', duration: '3:24' },
+         { title: 'Love Me Tender', duration: '3:06'},
+         { title: 'Cant Help Falling in Love', duration: '3:14' },
+         { title: 'Jailhouse Rock', duration: '2:15'}
+     ]
+ };
+
  var createSongRow = function(songNumber, songName, songLength) {
      var template =
         '<tr class="album-view-song-item">'
@@ -41,7 +58,7 @@ var albumPicasso = {
      return template;
  };
 
-var setCurrentAlbum = function(album) {
+ var setCurrentAlbum = function(album) {
      // #1
      var albumTitle = document.getElementsByClassName('album-view-title')[0];
      var albumArtist = document.getElementsByClassName('album-view-artist')[0];
@@ -65,5 +82,5 @@ var setCurrentAlbum = function(album) {
  };
  
  window.onload = function() {
-     setCurrentAlbum(albumMarconi);
+     setCurrentAlbum(albumElvis);
  };
